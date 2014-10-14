@@ -215,4 +215,5 @@ pip-log.txt
 .mr.developer.cfg
 
 # lT
-plugin_zips
+#plugin_zips
+res
