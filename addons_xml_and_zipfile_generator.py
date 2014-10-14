@@ -21,7 +21,7 @@ class Generator:
         EDIT THE ZIP PATH TO YOUR LIKING.
         Don't add the ending /
     """
-    zippath = 'zips'
+    zippath = 'plugin_zips'
 
 
 
@@ -52,7 +52,8 @@ class Generator:
         for addon in addons:
             try:
                 # skip any file or .git folder
-                if ( not os.path.isdir( addon ) or addon == ".git" or addon == zippath): continue
+                if ( not os.path.isdir( addon ) or addon == ".git" 
+                        or addon == zippath or addon == "res"): continue
                 # create path
                 _path = os.path.join( addon, "addon.xml" )
                 # split lines for stripping
@@ -88,7 +89,8 @@ class Generator:
         for addon in addons:
             try:
                 # skip any file or .git folder
-                if ( not os.path.isdir( addon ) or addon == ".git" or addon == zippath): continue
+                if ( not os.path.isdir( addon ) or addon == ".git" 
+                        or addon == zippath or addon == "res"): continue
                 # create path
                 _path = os.path.join( addon, "addon.xml" )
                 # split lines for stripping
