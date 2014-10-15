@@ -47,6 +47,7 @@ class Generator:
         print "Finished updating addons xml, md5 files and zipping addons"
 
     def _generate_zip_files ( self ):
+        # os.chdir( "src" )
         addons = os.listdir( "." )
         # loop thru and add each addons addon.xml file
         for addon in addons:
@@ -67,23 +68,28 @@ class Generator:
 
     def _generate_zip_file ( self, path, version, addonid):
         filename = path + "-" + version + ".zip"
+        print filename
+        zipdir= "../" + zippath
         try:
             zip = zipfile.ZipFile(filename, 'w')
             for root, dirs, files in os.walk(path + "/"):
+                if '.git' in dirs:
+                    dirs.remove('.git')
                 for file in files:
                     zip.write(os.path.join(root, file))
             zip.close()
-            if os.path.isfile(zippath + "/" + addonid + "/" + filename):
-                os.unlink(zippath + "/" + addonid + "/" + filename)
-#                os.rename(zippath + "\\" + addonid + "\\" + filename, zippath + "\\" + addonid + "\\" + filename + "." + datetime.datetime.now().strftime("%Y%m%d%H%M%S") )
-            if not os.path.isdir(zippath + "/" + addonid):
-                os.makedirs(zippath + "/" + addonid)
-            shutil.move(filename, zippath + "/" + addonid + "/")
+            if os.path.isfile(zipdir + "/" + addonid + "/" + filename):
+                os.unlink(zipdir + "/" + addonid + "/" + filename)
+#                os.rename(zipdir + "\\" + addonid + "\\" + filename, zipdir + "\\" + addonid + "\\" + filename + "." + datetime.datetime.now().strftime("%Y%m%d%H%M%S") )
+            if not os.path.isdir(zipdir + "/" + addonid):
+                os.makedirs(zipdir + "/" + addonid)
+            shutil.move(filename, zipdir + "/" + addonid + "/")
         except Exception, e:
             print e
 
     def _generate_addons_file( self ):
         # addon list
+        os.chdir( "src" )
         addons = os.listdir( "." )
         # final addons text
         addons_xml = u"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<addons>\n"
@@ -113,7 +119,7 @@ class Generator:
         # clean and add closing tag
         addons_xml = addons_xml.strip() + u"\n</addons>\n"
         # save file
-        self._save_file( addons_xml.encode( "utf-8" ), file="addons.xml" )
+        self._save_file( addons_xml.encode( "utf-8" ), file="../addons.xml" )
 
     def _generate_md5_file( self ):
         try:
@@ -125,10 +131,10 @@ class Generator:
 ###################### Deprecated md5 lib END ######################
 
             # create a new md5 hash
-            m=hashlib.md5(open( "addons.xml" ).read())
+            m=hashlib.md5(open( "../addons.xml" ).read())
             # save file
             print m.hexdigest()
-            self._save_file( m.hexdigest(), file="addons.xml.md5" )
+            self._save_file( m.hexdigest(), file="../addons.xml.md5" )
             
 
         except Exception, e:
