@@ -69,14 +69,14 @@
 			<forum>http://www.xbmchub.com/forums/rodrigos-xbmc-repo/14164-%5Brelease%5D-xbmc-karaoke-addon-rodrigo.html</forum>
 			<website>http://www.xbmchub.com/</website>
 			<email></email>
-			<source>https://raw.github.com/rrodrigoke/XBMC.repo/master/plugin.video.XBMCKaraoke/</source>
+			<source>https://raw.github.com/rodrigoke/XBMC.repo/master/plugin.video.XBMCKaraoke/</source>
 		</extension>
 	</addon>
 
 	<addon
         id="repository.imaxpo"
         name="iMaxpo's Repository"
-        version="1.0.3"
+        version="1.0.4"
         provider-name="iMaxpo">
 		<extension point="xbmc.addon.repository" name="iMaxpo's addon repository">
 			<info compressed="false">https://raw.github.com/luftreich/imaxpo.xbmc/master/addons.xml</info>
