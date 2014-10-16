@@ -1,52 +1,447 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.cnn.live"
-       name="CNN Live"
-       version="0.0.1"
-       provider-name="rooster">
+<addon id="plugin.video.tv5monde" name="tv5monde" version="1.1.2" provider-name="jamontes">
     <requires>
-        <import addon="xbmc.python" version="1.0"/>
+        <!-- FRODO version -->
+        <import addon="xbmc.python" version="2.1.0"/>
     </requires>
-    <extension point="xbmc.python.script"
-               library="default.py">
+    <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">CNN Live</summary>
-        <description lang="en">This XBMC plugin automatically plays news videos from CNN.</description>
+        <summary lang="en">TV5MONDE videos</summary>
+        <description lang="en">This plugin allows you to watch the TV5MONDE videos provided by TV5MONDE+ web site, selected by category and ordered by date of apearance</description>
+        <summary lang="es">TV5MONDE vídeos</summary>
+        <description lang="es">Este plugin permite ver los vídeos de TV5MONDE contenidos en la página web de TV5MONDE+, seleccionados por categoría y ordenados por fecha de emisión</description>
+        <summary lang="fr">TV5MONDE médiathèque</summary>
+        <description lang="fr">Ce plugin permet de regarder TV5MONDE médiathèque qui se trouve sur le site web de TV5MONDE+</description>
+        <language>fr</language>
     </extension>
 </addon>
 
-	<addon
-        id="plugin.video.XBMCKaraoke"
-        name="XBMC Karaoke addon"
-        version="1.0.6"
-        provider-name="Rodrigo">
-		<requires>
-			<import addon="xbmc.python"             	version="2.1.0"/>
-			<import addon="script.module.buggalo"   	version="1.1.5" />
-			<import addon="xbmc.addon"              	version="12.1.0"/>
-			<import addon="script.module.urlresolver"	version="1.1.0"/>
-			<import addon="script.module.simplejson"	version="2.0.10"/>
-            <import addon="script.module.addon.common"  version="2.0.0"/>
-		</requires>
-		<extension point="xbmc.python.pluginsource" library="default.py">
-			<provides>audio video</provides>
-		</extension>
-		<extension point="xbmc.addon.metadata">
-			<summary lang="en">XBMC Karaoke addon</summary>
-			<description lang="en">XBMC Karaoke addon developed by Rodrigo.[CR]For support, please visit the XBMCHUB forums.[CR][CR]Powered by [COLOR blue][B]XBMCHUB[/B].com[/COLOR]</description>
-			<disclaimer lang="en">For bugs, requests or general questions contact Rodrigo on the XBMCHUB forum.</disclaimer>
-			<platform>all</platform>
-			<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
-			<language>en</language>
-			<forum>http://www.xbmchub.com/forums/rodrigos-xbmc-repo/14164-%5Brelease%5D-xbmc-karaoke-addon-rodrigo.html</forum>
-			<website>http://www.xbmchub.com/</website>
-			<email></email>
-			<source>https://raw.github.com/rodrigoke/XBMC.repo/master/plugin.video.XBMCKaraoke/</source>
-		</extension>
-	</addon>
+<addon id="plugin.audio.npr"
+       name="NPR (National Public Radio)"
+       version="2.1.1"
+       provider-name="Stieg, Fisslefink">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">NPR (National Public Radio)</summary>
+    <description lang="en">All available NPR streams and most podcasts.</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.tekosman"
+       name="POWERTV"
+       version="0.0.16"
+       provider-name="xbmcTR Team">
+  <requires>
+	<import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.xbmctr" />
+	<import addon="script.module.xbmctr" />
+	<import addon="script.module.urlresolver" />
+	</requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>xbmcTR Team Sunar</summary>
+    <description>~~~xbmcTR Team Sunar ~~~ POWERTV ~~~</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.espn_3"
+       name="ESPN 3"
+       version="1.0.0"
+       provider-name="Ksosez,BlueCop,Romans I XVI">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+    	<import addon="script.module.mechanize" version="0.2.6"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+	<language />
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <summary lang="en">ESPN</summary>
+        <description lang="en">Watch full live streaming sporting events and replays on ESPN 3, including football, baseball, cricket, soccer, and basketball events.</description>
+	<forum>http://forum.xbmc.org/showthread.php?tid=186028</forum>
+	<source>https://github.com/asojka09/plugin.video.espn_3.git</source>
+	<email>austinsojka@hotmail.com</email>
+    </extension>
+</addon>
+
+<addon id="plugin.video.GOtv" name="GOtv" version="2.2.3" provider-name="lambda">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.metahandler" version="1.0.0"/>
+		<import addon="script.module.urlresolver" version="1.0.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+		<import addon="script.common.plugin.cache" version="0.9.1"/>
+		<import addon="script.module.parsedom" version="0.9.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup">
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Watch tv shows from various sources</summary>
+		<description lang="en">Watch tv shows from various sources</description>
+		<summary lang="el">Παρακολουθήστε σειρές από διάφορες πηγές</summary>
+		<description lang="el">Παρακολουθήστε σειρές από διάφορες πηγές</description>
+		<summary lang="fr">Regardez des séries TV en version originale (Anglais)</summary>
+		<description lang="fr">Regardez des séries TV en version originale (Anglais)</description>
+		<summary lang="he">צפו בתכניות טלויזיה ממקורות שונים</summary>
+		<description lang="he">צפו בתכניות טלויזיה ממקורות שונים</description>
+		<summary lang="nl">Bekijk TV Series van verscheidene bronnen</summary>
+		<description lang="nl">Bekijk TV Series van verscheidene bronnen</description>
+		<summary lang="pl">Oglądaj seriale z różnych źródeł</summary>
+		<description lang="pl">Oglądaj seriale z różnych źródeł</description>
+		<summary lang="pt">Assistir a séries de várias fontes</summary>
+		<description lang="pt">Assistir a séries de várias fontes</description>
+		<summary lang="pt_BR">Assistir a séries de várias fontes</summary>
+		<description lang="pt_BR">Assistir a séries de várias fontes</description>
+		<summary lang="ro">Urmărește seriale din diverse surse</summary>
+		<description lang="ro">Urmărește seriale din diverse surse</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<forum>http://www.xbmchub.com/forums/lambdas-xbmc-repository/</forum>
+		<source>https://github.com/lambda81/lambda-xbmc-addons</source>
+		<website>http://www.xbmchub.com/</website>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.veetle" version="0.1.6" name="Veetle" provider-name="t0mm0">
+    <requires>
+        <import addon="xbmc.python" version="1.0"/>
+        <import addon="script.module.simplejson" version="2.0.10"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point= "xbmc.addon.metadata">
+        <summary>Browse and stream from veetle.com</summary>
+        <description>Enables watching streams on veetle.com that are flash enabled.</description>
+        <disclaimer>Does not work for 'HD' streams which require a software download.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.ted.talks" name="TED Talks" version="4.2.4" provider-name="rwparris2, moreginger">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.elementtree" version="1.2.7"/>
+    <import addon="script.module.parsedom" version="0.9.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <!-- There are subtitles on TED in many languages,
+    and this plugin is (partially) internationalized in several,
+    but it seems better to claim the one we are sure of for now. -->
+    <language>en</language>
+    <summary lang="en">Watch talks from TED.com, a site dedicated to 'Ideas Worth Spreading'</summary>
+    <summary lang="hu">Beszédek megtekintése a TED.com-ról</summary>
+    <summary lang="pt">Veja debates de TED.com, um site dedicado a 'Ideias com Valor'</summary>
+    <description lang="en">TED is a small nonprofit devoted to Ideas Worth Spreading. It started out (in 1984) as a conference bringing together people from three worlds: Technology, Entertainment, Design. Since then its scope has become ever broader.</description>
+    <description lang="hu">TED egy kicsi non-profit szervezet aminek célpontjában az Ötlet áll amit érdemes megosztani. A webhely kezdete 1984-re nyúlik vissza egy konferenciára ami 3 külön világot hozott össze: Technológia, Szórakozás, Tervezés. Azóta a kör csak bővült.</description>
+    <description lang="pt">TED é uma organização sem fins lucrativos dedicada a 'Ideias com Valor'. Foi iniciada em 1984 como uma conferência que pretendia juntar pessoas de três mundos: Tecnologia, Entretenimento e Design. Desde ai tornou-se muito mais abrangente.</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=36866</forum>
+    <website>https://github.com/moreginger/xbmc-plugin.video.ted.talks</website>
+    <source>https://github.com/moreginger/xbmc-plugin.video.ted.talks.git</source>
+  </extension>
+</addon>
+
+<addon id="plugin.video.viooz.co" name="Viooz" version="1.2.0" provider-name="lambda">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.metahandler" version="1.0.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+		<import addon="script.common.plugin.cache" version="0.9.1"/>
+		<import addon="script.module.parsedom" version="0.9.1"/>
+		<import addon="plugin.video.youtube" version="2.9.2"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Watch a wide selection of movies from viooz.co</summary>
+		<description lang="en">Watch a wide selection of movies from viooz.co</description>
+		<summary lang="el">Παρακολουθήστε μια ευρεία συλλογή ταινιών από το viooz.co</summary>
+		<description lang="el">Παρακολουθήστε μια ευρεία συλλογή ταινιών από το viooz.co</description>
+		<summary lang="fr">Regardez des films en version originale (Anglais)</summary>
+		<description lang="fr">Regardez des films en version originale (Anglais)</description>
+		<summary lang="nl">Bekijk Speelfilms vanaf viooz.co</summary>
+		<description lang="nl">Bekijk Speelfilms vanaf viooz.co</description>
+		<summary lang="pl">Oglądaj filmy z viooz.co</summary>
+		<description lang="pl">Oglądaj filmy z viooz.co</description>
+		<summary lang="pt">Assistir a uma vasta selecção de filmes do site viooz.co</summary>
+		<description lang="pt">Assistir a uma vasta selecção de filmes do site viooz.co</description>
+		<summary lang="pt_BR">Assistir a uma vasta selecção de filmes do site viooz.co</summary>
+		<description lang="pt_BR">Assistir a uma vasta selecção de filmes do site viooz.co</description>
+		<summary lang="ro">Urmărește filme de viooz.co</summary>
+		<description lang="ro">Urmărește filme de viooz.co</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<forum>http://www.xbmchub.com/forums/lambdas-xbmc-repository/</forum>
+		<source>https://github.com/lambda81/lambda-xbmc-addons</source>
+		<website>http://www.xbmchub.com/</website>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.projectfreetv"
+       name="Project Free TV"
+       version="2.2.1"
+       provider-name="Eldorado">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.metahandler" />
+    <import addon="script.module.addon.common"/>
+    <import addon="script.common.plugin.cache" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+    <description lang="en">Visit www.xbmchub.com for support.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.willowtvx" name="Willow TV" version="2.2.7"
+	provider-name="AJ">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.simplejson" version="2.0.10" />
+		<import addon="script.module.beautifulsoup" version="3.2.0" />
+		<import addon="script.module.turtlex" version="1.6.1"/>
+		<import addon="script.module.mechanize" version="0.2.5" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="TurtleMain.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Willow.tv: Watch LIVE VIDEO STREAMING of International
+			Cricket</summary>
+		<description>Favorite Cricket Channel in America. Buy packages at
+			www.willow.tv and enjoy live streaming on your favorite XBMC Media
+			Center.</description>
+		<disclaimer>The video add-ons hosted by my XBMC add-ons repository(aj
+			add-ons) makes no warranties, expressed or implied, and hereby
+			disclaims and negates all other warranties, including without
+			limitation, implied warranties or conditions of merchantability,
+			fitness for a particular purpose, or non-infringement of intellectual
+			property or other violation of rights. Further, video add-ons don't
+			warrant or make any representations concerning the accuracy, likely
+			results, or reliability of the use of the materials on the Internet
+			web site where from data is retrieved or otherwise relating to such
+			materials or on any sites linked to this addon. Videos are streamed
+			directly from video-hosting websites that are having full rights to
+			remove such access to video if required.</disclaimer>
+		<platform>all</platform>
+		<license>GNU GPL v3</license>
+	</extension>
+</addon>
+
+<addon id="plugin.video.discovery_com" name="Discovery Networks" version="2.0.3" provider-name="AddonScriptorDE">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="plugin.video.howstuffworks_com" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Watch news, clips and full episodes on Discovery Network Channels (+AnimalPlanet Live streams)</summary>
+        <language>en</language>
+        <description lang="en">Watch news, clips and full episodes on Discovery Network Channels (+AnimalPlanet Live streams)</description>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <source>https://github.com/AddonScriptorDE/plugin.video.discovery_com</source>
+        <forum>http://forum.xbmc.org/showthread.php?tid=171876</forum>
+        <email>AddonScriptorDE at yahoo dot de</email>
+        <website>http://www.discovery.com</website>
+    </extension>
+</addon>
+
+<addon id="plugin.video.espn.video"
+       name="ESPN Video"
+       version="2.0.4"
+       provider-name="stacked">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.parsedom" version="1.3.0"/>
+	<import addon="script.module.buggalo" version="1.1.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">ESPN: Watch Sports Videos and Highlights Online.</summary>
+    <description lang="en">ESPN.com is the leading provider of sports on the Internet. ESPN.com provides its users, the young, affluent, male sports fan, with late breaking news, statistics, schedules, and player updates, in addition to up-to-the minute sports scores from live events.</description>
+    <platform>all</platform>
+	<language>en</language>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="1.8.7.5"
+  name="SportsDevil"
+  provider-name="MaxMustermann">
+  <requires>
+   <import addon="xbmc.python" version="2.1.0"/>
+   <import addon="script.common.plugin.cache" version="0.9.1"/>
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos of different sports streaming sites</summary>
+    <description>Play videos of different sports streaming sites</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.shahidmbcnet"
+       name="Shahid Arabic"
+       version="3.3.1"
+       provider-name="shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="plugin.video.youtube" version="2.9.2"/>
+	<import addon="script.module.elementtree" version="1.2.8"/>
+	<import addon="script.common.plugin.cache" version="0.9.1"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>ShahidMBC.net XBMC Client</summary>
+    <description>Formally known as ShahidMBC.net. This plugin fetches the video sources from ShahidMBC.net, youtube and some Live channels which you can play on XBMC compatible plateforms</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.tvondesizonexl" name="TV on DESI ZONE" version="2.2.8"
+	provider-name="ajdeveloped">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.simplejson" />
+		<import addon="script.module.beautifulsoup" />
+		<import addon="script.module.elementtree" />
+	</requires>
+	<extension point="xbmc.python.script" library="main.py">
+	<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Watch Indian TV videos as seen on desirulez.net</summary>
+		<description>Watch Indian TV videos as seen on desirulez.net</description>
+		<disclaimer>This addon makes no warranties, expressed or implied, and
+			hereby disclaims and negates all other warranties, including without
+			limitation, implied warranties or conditions of merchantability,
+			fitness for a particular purpose, or non-infringement of intellectual
+			property or other violation of rights. Further, TV on DESI ZONE addon
+			does not warrant or make any representations concerning the accuracy,
+			likely results, or reliability of the use of the materials on the
+			Internet web site where from data is retrieved or otherwise relating
+			to such materials or on any sites linked to this addon. Videos are
+			soruced from video-hosting websites that are having full rights to
+			remove such access to video if required.
+		</disclaimer>
+		<platform>all</platform>
+		<license>GNU GPL v3</license>
+	</extension>
+</addon>
+
+<addon id="plugin.video.howstuffworks_com" name="HowStuffWorks.com" version="2.0.3" provider-name="AddonScriptorDE">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Learn How Everything Works!</summary>
+        <language>en</language>
+        <description lang="en">Learn How Everything Works!</description>
+        <website>http://www.howstuffworks.com</website>
+        <source>https://github.com/AddonScriptorDE/plugin.video.howstuffworks_com</source>
+        <forum>http://forum.xbmc.org/showthread.php?tid=137984</forum>
+        <email>AddonScriptorDE at yahoo dot de</email>
+    </extension>
+</addon>
+
+<addon id="plugin.video.tv4me"
+       name="TV4ME"
+       version="1.0.4c"
+       provider-name="kinkin, art by Marquerite">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.t0mm0.common" version="1.1.0"/>
+        <import addon="script.module.requests" version="1.1.0"/>
+        <import addon="plugin.video.youtube"/>
+        <import addon="script.module.metahandler" version="2.4.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               	library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service"
+             	library="service.py" start="startup">
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Stream your favourite TV shows from watch-tvseries.net</summary>
+        <description>Stream your favourite TV shows from watch-tvseries.net</description>
+    </extension>
+
+</addon>
+
+<addon id="plugin.video.aljazeera" name="Al Jazeera" provider-name="Jonathan Beluch (jbel)" version="1.9.4">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.beautifulsoup" version="3.2.0" />
+    <import addon="script.module.simplejson" version="2.0.10" />
+    <import addon="script.module.xbmcswift" version="0.2.0" />
+    <import addon="plugin.video.youtube" version="4.4.4" />
+  </requires>
+  <extension library="addon.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>en</language>
+    <platform>all</platform>
+    <summary lang="en">Watch videos and the live stream from Al Jazeera English.</summary>
+    <description lang="en">"Drawing on the legacy of the groundbreaking Al Jazeera Arabic channel, Al Jazeera English was launched on November 15, 2006 to more than 80 million households worldwide.[CR][CR] The 24-hour news and current affairs channel is the first international English-language news channel to broadcast across the globe from the Middle East.[CR][CR] Al Jazeera's global footprint continues to grow and now broadcasts to more than 220 million households on six continents in more than 100 countries.[CR][CR] Our channel is broadcast from four strategic broadcast centres: Doha, Kuala Lumpur, London, and Washington DC. Unlike other international channels, we broadcast from our different centres, as the world turns, providing the most comprehensive and contextual news coverage.[CR][CR] Our mission is to provide independent, impartial news for an international audience and to offer a voice to a diversity of perspectives from under-reported regions.[CR][CR] In addition, the channel aims to balance the information flow between the South and the North.[CR][CR] The channel of reference for the Middle East and Africa, Al Jazeera has unique access to some of the world’s most troubled and controversial locations. Our determination and ability to accurately reflect the truth on the ground in regions torn by conflict and poverty has set our content apart."[CR][CR] Source: Al Jazeera
+    </description>
+  </extension>
+</addon>
 
 <!--suppress ALL -->
 <addon id="plugin.video.1channel" version="2.5.0" name="1Channel" provider-name="Bstrdsmkr">
@@ -73,10 +468,27 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.canada.on.demand" name="Canada On Demand" version="0.8.6" provider-name="andre">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup"	version="3.2.0"/>
+    <import addon="script.module.simplejson" version="2.0.10"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Video On Demand From Canada</summary>
+    <description>Stream content from tons of Canadian providers including CTV, CBC, TSN, Global and MANY More!</description>
+    <platform>all</platform>
+    <disclaimer></disclaimer>
+  </extension>
+</addon>
+
 	<addon
         id="repository.imaxpo"
         name="iMaxpo's Repository"
-        version="1.0.5"
+        version="1.0.6"
         provider-name="iMaxpo">
 		<extension point="xbmc.addon.repository" name="iMaxpo's addon repository">
 			<info compressed="false">https://raw.github.com/luftreich/imaxpo.xbmc/master/addons.xml</info>
@@ -96,4 +508,198 @@
             <source>https://raw.github.com/luftreich/imaxpo.xbmc/master/repository.imaxpo</source>
 		</extension>
 	</addon>
+
+<addon id="plugin.video.euronews_com" name="euronews.com" version="2.0.5" provider-name="AddonScriptorDE">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Livestream and latest news videos from euronews.com | Available languages: English, Greek, French, German, Italian, Spanish, Portuguese, Polish, Russian, Ukrainian, Turkish, Arabic and Persian</summary>
+        <language></language>
+        <description lang="en">Livestream and latest news videos from euronews.com | Available languages: English, Greek, French, German, Italian, Spanish, Portuguese, Polish, Russian, Ukrainian, Turkish, Arabic and Persian</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <source>https://github.com/AddonScriptorDE/plugin.video.euronews_com</source>
+        <forum>http://forum.xbmc.org/showthread.php?tid=157182</forum>
+        <email>AddonScriptorDE at yahoo dot de</email>
+        <website>http://www.euronews.com</website>
+    </extension>
+</addon>
+
+<addon id="plugin.video.GOmovies" name="GOmovies" version="2.2.1" provider-name="lambda">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.metahandler" version="1.0.0"/>
+		<import addon="script.module.urlresolver" version="1.0.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+		<import addon="script.common.plugin.cache" version="0.9.1"/>
+		<import addon="script.module.parsedom" version="0.9.1"/>
+		<import addon="plugin.video.youtube" version="2.9.2"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Watch movies from various sources</summary>
+		<description lang="en">Watch movies from various sources</description>
+		<summary lang="el">Παρακολουθήστε ταινίες από διάφορες πηγές</summary>
+		<description lang="el">Παρακολουθήστε ταινίες από διάφορες πηγές</description>
+		<summary lang="fr">Regardez des films en version originale (Anglais)</summary>
+		<description lang="fr">Regardez des films en version originale (Anglais)</description>
+		<summary lang="he">צפו בסרטים ממקורות שונים</summary>
+		<description lang="he">צפו בסרטים ממקורות שונים</description>
+		<summary lang="nl">Bekijk Speelfilms van verscheidene bronnen</summary>
+		<description lang="nl">Bekijk Speelfilms van verscheidene bronnen</description>
+		<summary lang="pl">Oglądaj filmy z różnych źródeł</summary>
+		<description lang="pl">Oglądaj filmy z różnych źródeł</description>
+		<summary lang="pt">Assistir a filmes de várias fontes</summary>
+		<description lang="pt">Assistir a filmes de várias fontes</description>
+		<summary lang="pt_BR">Assistir a filmes de várias fontes</summary>
+		<description lang="pt_BR">Assistir a filmes de várias fontes</description>
+		<summary lang="ro">Urmărește filme din diverse surse</summary>
+		<description lang="ro">Urmărește filme din diverse surse</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<forum>http://www.xbmchub.com/forums/lambdas-xbmc-repository/</forum>
+		<source>https://github.com/lambda81/lambda-xbmc-addons</source>
+		<website>http://www.xbmchub.com/</website>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.vgtv" name="VGTV" version="2.0.8" provider-name="Espen Hovlandsdal">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift2" version="1.1.1"/>
+    <import addon="script.module.simplejson" version="2.0.10"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language>no</language>
+    <summary>VGTV.no</summary>
+    <description>Enjoy videos from VGTV.no - News, sports and entertainment - mainly Norwegian.</description>
+    <description lang="no">Se videoer fra VGTV.no - NettTV fra Verdens Gang (VG).</description>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=163526</forum>
+    <source>https://github.com/rexxars/vgtv-xbmc.git</source>
+    <email>espen@hovlandsdal.com</email>
+  </extension>
+</addon>
+
+<addon id="plugin.video.cbsnews_com" name="CBSnews.com" version="2.0.8" provider-name="AddonScriptorDE">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Various news and shows (60 Minutes, 48 Hours, ...)</summary>
+        <language>en</language>
+        <description lang="en">Various news and shows (60 Minutes, 48 Hours, ...)</description>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <source>https://github.com/AddonScriptorDE/plugin.video.cbsnews_com</source>
+        <forum>http://forum.xbmc.org/showthread.php?tid=136416</forum>
+        <email>AddonScriptorDE at yahoo dot de</email>
+        <website>http://www.cbsnews.com/videos</website>
+    </extension>
+</addon>
+
+<addon id="plugin.video.dailymotion_com" name="DailyMotion.com" version="2.1.2" provider-name="AddonScriptorDE">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simple.downloader" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Movies, TV, Music, User-Clips, 3D and Livestreams</summary>
+        <language></language>
+        <description lang="en">Movies, TV, Music, User-Clips, 3D and Livestreams</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <website>http://www.dailymotion.com</website>
+        <source>https://github.com/AddonScriptorDE/plugin.video.dailymotion_com</source>
+        <forum>http://forum.xbmc.org/showthread.php?tid=142626</forum>
+        <email>AddonScriptorDE at yahoo dot de</email>
+    </extension>
+</addon>
+
+<addon id="plugin.video.filmarkivet"
+       name="Filmarkivet"
+       version="2.0.0"
+       provider-name="Anders Karlsson (pugo@pugo.org)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.0"/>
+    <import addon="script.module.parsedom" version="2.1.0"/>
+    <import addon="script.module.requests" version="1.0.4"/>
+    <import addon="script.module.xbmcswift" version="0.2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language>se</language>
+    <summary lang="en">Watch movies from the Swedish Film Institute film archive</summary>
+    <summary lang="se">Se filmer från Svenska Filminstitutets Filmarkivet</summary>
+    <description lang="en">Filmarkivet is an archive of historical Swedish films, provided by the Swedish Film Institute.</description>
+    <description lang="se">Filmarkivet är ett arkiv med historiska svenska filmer, publicerade av Svenska Filminstitutet.</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.fox.news"
+       name="Fox News"
+       version="4.0.3"
+       provider-name="t1m,divingmule">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.3.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Fox News</summary>
+        <description>
+            Watch videos from video.foxnews.com &amp; video.foxbusiness.com.
+        </description>
+        <platform>all</platform>
+        <language>en</language>
+        <forum>http://forum.xbmc.org/showthread.php?tid=57175</forum>
+        <email></email>
+        <source>https://github.com/learningit/plugin.video.fox.news</source>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website>http://video.foxnews.com</website>
+    </extension>
+</addon>
+
+<addon id="plugin.video.movie4k"
+	name="Movie4K.to"
+	version="1.0.2"
+	provider-name="eleazarcoding">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.urlresolver"  version="2.1.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Movie4K.to</summary>
+    <description lang="en">Movie4K/Movie2K is one of the best and easiest free movies websites to watch movies on the internet. Simply select the movie of your choice for free and without registration.</description>
+    <platform>all</platform>
+    <forum>http://www.xbmchub.com/forums/eleazars-xbmc-add-repository/</forum>
+    <website>http://www.xbmchub.com/</website>
+  </extension>
+</addon>
 </addons>
