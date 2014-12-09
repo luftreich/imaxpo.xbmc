@@ -6,6 +6,9 @@
 ### 描述
 * 插件库由另外一个插件来管理， 记录着所有插件的用途及下载地址， 即管理插件的插件，安装方法和普通插件一样, 目前已经整合到最新xbmc 版本，每次打开xbmc的时候会自动更新列表， 点击"get more"可验证。
 
+### 下载
+* [click here]（https://github.com/luftreich/imaxpo.xbmc/tree/master/plugin_zips/repository.imaxpo）
+
 ### 管理
 * 从服务器上查看
 https://github.com/luftreich/imaxpo.xbmc/tree/master/plugin_zips
