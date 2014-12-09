@@ -305,9 +305,9 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="1.8.7.5"
-  name="SportsDevil"
-  provider-name="MaxMustermann">
+  version="3.0.1"
+  name="DigiTele Sports"
+  provider-name="AarronLee, MaxMustermann">
   <requires>
    <import addon="xbmc.python" version="2.1.0"/>
    <import addon="script.common.plugin.cache" version="0.9.1"/>
@@ -318,8 +318,8 @@
    <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Play videos of different sports streaming sites</summary>
-    <description>Play videos of different sports streaming sites</description>
+    <summary>DigiTele Sports</summary>
+    <description>Add-on para ver los canales deportivos de DigiTele (vip racing 1-2-3-4-5-6-7-8)</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -510,7 +510,7 @@
 	<addon
         id="repository.imaxpo"
         name="iMaxpo's Repository"
-        version="1.0.8"
+        version="1.0.9"
         provider-name="iMaxpo">
 		<extension point="xbmc.addon.repository" name="iMaxpo's addon repository">
 			<info compressed="false">https://raw.github.com/luftreich/imaxpo.xbmc/master/addons.xml</info>
