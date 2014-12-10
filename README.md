@@ -10,8 +10,7 @@
 * [click here](https://github.com/luftreich/imaxpo.xbmc/tree/master/plugin_zips/repository.imaxpo)
 
 ### 管理
-* 从服务器上查看
-https://github.com/luftreich/imaxpo.xbmc/tree/master/plugin_zips
+* 从服务器上查看[click here](https://github.com/luftreich/imaxpo.xbmc/tree/master/plugin_zips)
 
 * 从盒子上查看，第一次打开必须有网络支持
 请依照此步骤: 进入install from zip file当前界面 --> Get Add-ons --> iMaxpo's Repository --> Video Add-ons
