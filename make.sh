@@ -42,8 +42,8 @@ echo "$*" | grep 'sync' && {
     
     touch TIME_TAG.zip
     touch -t 198302231200.00 *.zip
-    # rsync -rlpgoDPc -e ssh server:/work/temp/imaxpo_xbmc_addons/*.zip . | grep '\.zip' || {
-    rsync -rlpgoDPc                 /work/temp/imaxpo_xbmc_addons/*.zip . | grep '\.zip' || {
+    rsync -rlpgoDPc -e ssh server:/work/temp/imaxpo_xbmc_addons/*.zip . | grep '\.zip' || {
+    # rsync -rlpgoDPc                 /work/temp/imaxpo_xbmc_addons/*.zip . | grep '\.zip' || {
         echo "no zip sync ?? now exit !"
         exit 7
     }

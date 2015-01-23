@@ -20,6 +20,36 @@
     </extension>
 </addon>
 
+<addon id="repository.TheYid" name="TheYid's REPO" version="1.3" provider-name="tcz009">
+	<extension point="xbmc.addon.repository" name="TheYid Addon Repository">
+		<info compressed="false">https://raw.github.com/TheYid/My-Repo/master/addons.xml</info>
+		<checksum>https://raw.github.com/TheYid/My-Repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/TheYid/My-Repo/master/zips</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install TheYid's repo Addons</summary>
+		<description>install addons from tcz009 AKA TheYid .......For OFFICIAL Support please Visit XBMCHUB.COM or follow me on Twitter @TheYid009</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.module.urlresolver"
+     name="urlresolver"
+     version="2.4.0"
+     provider-name="Eldorado">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="4.4.7"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve common video host URL's to be playable in XBMC.</summary>
+    <description lang="en">Resolve common video host URL's to be playable in XBMC, simplify addon development of video plugins requiring multi video hosts.</description>
+  </extension>
+</addon>
+
 <addon id="plugin.audio.npr"
        name="NPR (National Public Radio)"
        version="2.1.1"
@@ -56,6 +86,20 @@
     <description>~~~xbmcTR Team Sunar ~~~ POWERTV ~~~</description>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="repository.xbmcadult" name="XBMC-Adult Addons" version="1.0.6" provider-name="xbmc-adult">
+	<extension point="xbmc.addon.repository" name="XBMC Adult Addons">
+		<info compressed="false">http://raw.github.com/xbmc-adult/xbmc-adult/ghmaster/addons.xml</info>
+		<checksum>http://raw.github.com/xbmc-adult/xbmc-adult/ghmaster/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/xbmc-adult/xbmc-adult/ghmaster</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>XBMC Addons for Adults Only</summary>
+		<description>This repository contains addons that are for adults only. You may only view the contents of this repository if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this content.</description>
+		<disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="plugin.video.espn_3"
@@ -122,6 +166,27 @@
 		<website>http://www.xbmchub.com/</website>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon
+  id="plugin.video.videodevil"
+  version="1.7.89"
+  name="VideoDevil"
+  provider-name="xbmc-adult">
+  <requires>
+   <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos from different adult streaming sites</summary>
+    <description>This addon plays videos from YouPorn, Tube8, Boysfood, MoviesAnd, PornoTube, xHamster, KeezMovies and some other adult streaming sites. It contains explicit adult material. You may only view this addon if you are at least 18 years of age, or at least the age of majority in the jurisdiction where you reside or from which you access this content. If you do not meet these requirements, then you do not have permission to use this addon.</description>
+    <disclaimer>The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="plugin.video.veetle" version="0.1.6" name="Veetle" provider-name="t0mm0">
@@ -510,7 +575,7 @@
 	<addon
         id="repository.imaxpo"
         name="iMaxpo's Repository"
-        version="1.0.9"
+        version="1.0.10"
         provider-name="iMaxpo">
 		<extension point="xbmc.addon.repository" name="iMaxpo's addon repository">
 			<info compressed="false">https://raw.github.com/luftreich/imaxpo.xbmc/master/addons.xml</info>
@@ -530,6 +595,51 @@
             <source>https://raw.github.com/luftreich/imaxpo.xbmc/master/repository.imaxpo</source>
 		</extension>
 	</addon>
+
+<addon id="plugin.video.aob" version="2.0.1" name="Adult's Only [COLOR deeppink][B]HUB[/B][/COLOR]" provider-name="[COLOR blue][B]tcz009[/B][/COLOR] [B][I]TheYid REPO[/B][/I]">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.t0mm0.common" version="2.1.1"/>
+        <import addon="script.module.urlresolver"  version="2.0.9"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>OVER 18's 21s ONLY!!!!!Stream [COLOR red]XXX[/COLOR] movies [COLOR red][B][I]Real-Debrid or Alldebird PREMIUM ONLY[/B][/I][/COLOR]</summary>
+        <description>OVER 18's 21s ONLY!!!!!........ [CR]Stream all of TheYids Adult Addons in one!!! [CR][COLOR red]XXX[/COLOR] movies[COLOR red]XXX[/COLOR].......... OVER 18's 21's ONLY [COLOR red]XXX[/COLOR]...... [CR][COLOR red][B][I]Real-Debrid or Alldebird PREMIUM ONLY[/B][/I][/COLOR] [CR][COLOR blue][B][I]!!!!! DO NOT INSTALL THIS ADDON IF YOU ARE UNDER 18 or 21. DO NOT INSTALL THIS ADDON IF YOU DO NOT HAVE A PREMIUM DEBIRD ACCOUNT !!!!![/B][/I][/COLOR]</description>
+        <platform>all</platform>
+        <disclaimer lang="en">[COLOR red][B][I]!!!!! DO NOT INSTALL THIS ADDON IF YOU ARE UNDER 18 or 21. DO NOT INSTALL THIS ADDON IF YOU DO NOT HAVE A PREMIUM DEBIRD ACCOUNT !!!!![/B][/I][/COLOR]  [COLOR red][B][I]Real-Debrid or Alldebird PREMIUM ONLY[/B][/I][/COLOR]  [COLOR red][B][I]!!!!! DO NOT INSTALL THIS ADDON IF YOU ARE UNDER 18 or 21. DO NOT INSTALL THIS ADDON IF YOU DO NOT HAVE A PREMIUM DEBIRD ACCOUNT !!!!![/B][/I][/COLOR]</disclaimer>
+    </extension>
+</addon>
+
+<addon id="plugin.video.ustvvod" name="USTV VoD" version="1.0.9" provider-name="BlueCop">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    <import addon="script.module.coveapi" version="0.2.1"/>
+    <import addon="script.module.free.cable.database" version="0.0.4"/>
+    <import addon="script.module.html5lib" version="0.999.0"/>
+    <import addon="script.module.pyamf" version="0.6.2"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.module.socksipy" version="2.0.0"/>
+	<import addon="script.module.stem" version="1.2.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">USTV Video-on-Demand</summary>
+    <summary lang="de">USTV Video-on-Demand</summary>
+    <description lang="en">Your Video-on-Demand streaming platform from US TV Networks</description>
+    <description lang="de">Ihre Video-on-Demand-Streaming-Plattform aus US-TV-Networks</description>
+    <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <disclaimer lang="de">Einige Teile dieses Addons sind möglicherweise in Ihrem Land nicht legal - bitte prüfen Sie Ihre lokal gültigen Gesetze vor der Installation.</disclaimer>
+    <source>https://github.com/moneymaker365/plugin.video.ustvvod</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=166099</forum>
+  </extension>
+</addon>
 
 <addon id="plugin.video.euronews_com" name="euronews.com" version="2.0.5" provider-name="AddonScriptorDE">
     <requires>
@@ -630,6 +740,32 @@
         <summary>Watch BBC Sport Live Streams</summary>
         <description>This XBMC plugin enables (UK only) the playing of live TV content from the BBC Sport website.</description>
     </extension>
+</addon>
+
+<addon id="plugin.video.i24News"
+       name="i24 News"
+       version="1.0.3"
+       provider-name="t1m">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.pyamf" version="0.6.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">i24News XBMC Addon</summary>
+    <description lang="en">i24News is an international 24-hour news and current affairs television channel based in Jaffa Port, Tel Aviv, Israel. It broadcasts in English, French and Arabic.</description>
+    <disclaimer lang="en">Feel free to use this script. For information visit the wiki.</disclaimer>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=187224</forum>
+    <website>http://www.i24news.tv/en/</website>
+    <email></email>
+    <source>https://github.com/learningit/plugin.video.i24News</source>
+  </extension>
 </addon>
 
 <addon id="plugin.video.cbsnews_com" name="CBSnews.com" version="2.0.8" provider-name="AddonScriptorDE">
