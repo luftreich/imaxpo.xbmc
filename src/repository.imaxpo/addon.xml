@@ -2,7 +2,7 @@
 	<addon 
         id="repository.imaxpo" 
         name="iMaxpo's Repository" 
-        version="1.2.7"
+        version="1.2.8"
         provider-name="iMaxpo">
         <requires>
             <!-- FRODO version -->

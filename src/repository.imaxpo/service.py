@@ -19,7 +19,8 @@ class Track:
 ##        ua='Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
         # ua='Mozilla/5.0 (Linux; U; Android 2.2.2; de-de; MB860 Build/OLYFR_U4_1.8.3) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
 
-        ua='Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; zh-tw) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16'
+        # ua='Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; zh-tw) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16'
+        ua='Mozilla/5.0 (Linux; Android 4.4.2; m201 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36'
         # print (ua)
         import urllib2
         try:
@@ -47,9 +48,45 @@ class Track:
                 from os import environ
                 from hashlib import sha1
                 utm_gif_location = "http://www.google-analytics.com/__utm.gif"
-                # title = os.popen('pwd').read().strip('\n')
-                title = os.popen('getprop ro.build.fingerprint').read().strip('\n')
-                print title
+                
+                try:
+                    title_android = os.popen('getprop ro.build.fingerprint').read().strip('\n')
+                except:
+                    print "Err: os.popen not support !"
+                    title_android = ''
+
+                # print bool(title and title.strip())
+
+                try:
+                    title_linux = os.uname()[0] + '/' + \
+                            os.uname()[1] + '/' + \
+                            os.uname()[2] + '/' + \
+                            os.uname()[3] + '/' + \
+                            os.uname()[4]
+                except:
+                    print "Err: os.uname not support !"
+                    title_linux = ''
+
+                try:
+                    import platform
+                    title_win = platform.platform()
+                except:
+                    print "Err: platform.platform not support !"
+                    title_win = ''
+
+                if not title_android == "":
+                    title = title_android
+                elif not title_linux == "":
+                    title = title_linux
+                elif not title_win == "":
+                    title = title_win
+                else:
+                    title = "X"
+
+                # print title
+                title = title.replace(" ", "-")
+                title = title.replace("#", "-")
+
                 if not group=="None":
                         utm_track = utm_gif_location + "?" + \
                                 "utmwv=" + VERSION + \
