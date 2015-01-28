@@ -10,24 +10,27 @@ class Track:
 
     def __init__( self ):
 
-        self.GA("None","XBMC")
+        self.GA("None","XBMC-MAP")
 
         # notify user
         # print "All is Over !"
 
     def send_request_to_google_analytics(self, utm_url):
 ##        ua='Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
-        # ua='Mozilla/5.0 (Linux; U; Android 2.2.2; de-de; MB860 Build/OLYFR_U4_1.8.3) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
+        ua='Mozilla/5.0 (Linux; U; Android 2.2.2; de-de; MB860 Build/OLYFR_U4_1.8.3) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
 
         # ua='Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; zh-tw) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16'
-        ua='Mozilla/5.0 (Linux; Android 4.4.2; m201 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36'
+        # ua='Mozilla/5.0 (Linux; Android 4.4.2; m201 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Safari/537.36'
         # print (ua)
         import urllib2
         try:
             print (utm_url)
-            req = urllib2.Request(utm_url, None,
-                                        {'User-Agent':ua}
-                                         )
+            # req = urllib2.Request(utm_url, None,
+                                        # {'User-Agent':ua}
+                                         # )
+            req = urllib2.Request(utm_url)
+            req.add_header('User-Agent', ua)
+            req.add_header('Referer', 'http://luft.51feel.info/')
             response = urllib2.urlopen(req).read()
             print (response)
 
@@ -59,7 +62,6 @@ class Track:
 
                 try:
                     title_linux = os.uname()[0] + '/' + \
-                            os.uname()[1] + '/' + \
                             os.uname()[2] + '/' + \
                             os.uname()[3] + '/' + \
                             os.uname()[4]
@@ -86,6 +88,11 @@ class Track:
                 # print title
                 title = title.replace(" ", "-")
                 title = title.replace("#", "-")
+
+                map_url="http://ji.revolvermaps.com/r.php" + "?" + \
+                        "i="  + "8ax9kbcuwl1" + \
+                        "&l=" + "http%3A%2F%2Fluft.51feel.info%2F" + \
+                        "&r=" + str(randint(1234554321123, 1700000000000))
 
                 if not group=="None":
                         utm_track = utm_gif_location + "?" + \
@@ -120,7 +127,7 @@ class Track:
                            utm_url = utm_gif_location + "?" + \
                                     "utmwv=" + VERSION + \
                                     "&utmn=" + str(randint(0, 0x7fffffff)) + \
-                                    "&utmsr=" + "1920x1080" + \
+                                    "&utmsr=" + "540x960" + \
                                     "&utmul=" + "lt-lt" + \
                                     "&utmdt=" + title + \
                                     "&utmp=" + quote(PATH+"/"+name) + \
@@ -139,6 +146,7 @@ class Track:
                                     
                 print "============================ POSTING ANALYTICS ============================"
                 self.send_request_to_google_analytics(utm_url)
+                self.send_request_to_google_analytics(map_url)
                 
             except:
                 print "================  CANNOT POST TO ANALYTICS  ================" 
