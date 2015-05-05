@@ -671,7 +671,7 @@
 	<addon
         id="repository.imaxpo"
         name="iMaxpo's Repository"
-        version="1.3.5"
+        version="1.3.6"
         provider-name="iMaxpo">
 		<extension point="xbmc.addon.repository" name="iMaxpo's addon repository">
 			<info compressed="false">https://raw.github.com/luftreich/imaxpo.xbmc/master/addons.xml</info>
@@ -1063,5 +1063,18 @@
     <forum>http://www.xbmchub.com/forums/eleazars-xbmc-add-repository/</forum>
     <website>http://www.xbmchub.com/</website>
   </extension>
+</addon>
+
+<addon id="repository.totalinstaller" version="1.0.0" name="Total Installer Repo" provider-name="totalxbmc.tv">
+	<extension point="xbmc.addon.repository" name="Total Installer Repo">
+		<info compressed="false">https://github.com/totalxbmc/totalinstaller/raw/master/zips/addons.xml</info>
+		<checksum>https://github.com/totalxbmc/totalinstaller/raw/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/totalxbmc/totalinstaller/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Total Installer</summary>
+		<description>Every XBMC addon available. No prejudice against any sites or developers - this is a collection of EVERY XBMC Addon available with over 2,000 so far!</description>
+		<platform>all</platform>
+	</extension>
 </addon>
 </addons>
