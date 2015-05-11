@@ -157,24 +157,6 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.pftv" name="Project Free TV" version="0.0.1" provider-name="bemerson">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simplejson" />
-    <import addon="script.module.urlresolver" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Project Free TV Library Exporter</summary>
-    <description lang="en">Browse and export to local library Project Free TV shows and movies</description>
-    <disclaimer></disclaimer>
-  </extension>
-</addon>
-
 <addon id="plugin.video.dramasonline"
        name="DramasOnline.com"
        version="2.4.3"
@@ -930,6 +912,24 @@
         <email>AddonScriptorDE at yahoo dot de</email>
         <website>http://www.euronews.com</website>
     </extension>
+</addon>
+
+<addon id="plugin.video.pftv" name="Project Free TV" version="0.0.1" provider-name="bemerson">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.urlresolver" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Project Free TV Library Exporter</summary>
+    <description lang="en">Browse and export to local library Project Free TV shows and movies</description>
+    <disclaimer></disclaimer>
+  </extension>
 </addon>
 
 <addon id="plugin.video.GOmovies" name="GOmovies" version="2.2.1" provider-name="lambda">
