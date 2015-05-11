@@ -67,6 +67,19 @@
   </extension>
 </addon>
 
+<addon id="repository.xunitytalk" name=".[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk Repository" version="1.0.6" provider-name=".[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk">
+	<extension point="xbmc.addon.repository" name="Mikey1234 Addon Repository">
+		<info compressed="false">http://xty.me/xunitytalk/addons/addons.xml</info>
+		<checksum>http://xty.me/xunitytalk/addons/addons.xml.md5</checksum>
+		<datadir zip="true">http://xty.me/xunitytalk/addons</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>The Best Third Party Addons for XBMC, .[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk</summary>
+		<description>The Best Third Party Addons for XBMC, .[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="plugin.audio.npr"
        name="NPR (National Public Radio)"
        version="2.1.1"
@@ -144,6 +157,24 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.pftv" name="Project Free TV" version="0.0.1" provider-name="bemerson">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.urlresolver" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Project Free TV Library Exporter</summary>
+    <description lang="en">Browse and export to local library Project Free TV shows and movies</description>
+    <disclaimer></disclaimer>
+  </extension>
+</addon>
+
 <addon id="plugin.video.dramasonline"
        name="DramasOnline.com"
        version="2.4.3"
@@ -162,6 +193,23 @@
     <description>Watch dramasonline.com on your XBMC. This plugin fetches the video sources from dramasonline.com and play on XBMC compatible plateforms</description>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="plugin.video.moviestwentyfive" version="0.10" name="Movie25" provider-name="The_Silencer">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.urlresolver"  version="1.0.0"/>
+        <import addon="script.module.addon.common" version="2.0.0"/>
+	<import addon="script.module.metahandler"  version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Browse www.moive25.so/</summary>
+        <description>Watch content from www.movie25.so</description>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="plugin.video.GOtv" name="GOtv" version="2.2.3" provider-name="lambda">
@@ -226,6 +274,26 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.hightechcorvette"
+	name="High Tech Corvette"
+	version="1.0.2"
+	provider-name="xbmchub.com">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">High Tech Corvette</summary>
+    <description lang="en">Covering drag racing, road racing, street racing, Coffee and Cars, the Texas Mile, custom builds, underground events, supercars, dyno pulls, and testing.</description>
+    <platform>all</platform>
+    <forum>http://www.xbmchub.com/forums/official-xbmc-hub-repo/</forum>
+    <website>http://www.xbmchub.com/</website>
+  </extension>
+</addon>
+
 <addon id="plugin.video.veetle" version="0.1.6" name="Veetle" provider-name="t0mm0">
     <requires>
         <import addon="xbmc.python" version="1.0"/>
@@ -268,6 +336,26 @@
     <website>https://github.com/moreginger/xbmc-plugin.video.ted.talks</website>
     <source>https://github.com/moreginger/xbmc-plugin.video.ted.talks.git</source>
   </extension>
+</addon>
+
+<addon id="plugin.video.F.T.V"
+       name="FilmOn.TV"
+       version="1.3.6"
+       provider-name="kinkin, icon by azad720">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.t0mm0.common" version="1.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               	library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Free to view live streaming</summary>
+        <description>Stream Live TV from FilmOn or watch FilmOn Demand. Login with your FilmOn user-name to access recording features.</description>
+    </extension>
+
 </addon>
 
 <addon id="plugin.video.viooz.co" name="Viooz" version="1.2.0" provider-name="lambda">
@@ -382,6 +470,28 @@
         <email>AddonScriptorDE at yahoo dot de</email>
         <website>http://www.discovery.com</website>
     </extension>
+</addon>
+
+<addon id="plugin.video.vevo" name="VEVO" version="0.8.2" provider-name="BlueCop">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.facebook.media" version="0.9.2"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Music Videos from VEVO</summary>
+    <summary lang="de">Musik Videos von VEVO</summary>
+    <description lang="en">Watch your favorite artist's music videos, see premiere performances and search for new music on VEVO.com</description>
+    <description lang="de">Schaue Top Videos und Performances Deiner Lieblingskünstler und entdecke neue Musik auf VEVO.com</description>
+    <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <disclaimer lang="de">Einige Teile dieses Addons sind möglicherweise in Ihrem Land nicht legal - bitte prüfen Sie Ihre lokal gültigen Gesetze vor der Installation.</disclaimer>
+    <source>https://github.com/moneymaker365/plugin.video.vevo</source>
+  </extension>
 </addon>
 
 <addon id="plugin.video.tvo"
@@ -527,6 +637,21 @@
 	</extension>
 </addon>
 
+<addon id="script.module.t0mm0.common"
+	     name="t0mm0's common stuff"
+	     version="2.1.1"
+	     provider-name="t0mm0">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Collection of commonly used addon routines</summary>
+    <description lang="en">Collection of commonly used addon routines to simplify addon development.</description>
+  </extension>
+</addon>
+
 <addon id="plugin.video.howstuffworks_com" name="HowStuffWorks.com" version="2.0.3" provider-name="AddonScriptorDE">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -651,6 +776,22 @@
   </extension>
 </addon>
 
+<addon id="repository.iWillFolo.xbmc" name="iWillFolo add-ons" version="0.3" provider-name="iWillFolo.com">
+	<extension point="xbmc.addon.repository" name="iWillFolo add-on repository">
+		<info compressed="false">http://iwillfolo.com/wordpress/wp-content/uploads/download_dir/addons.xml</info>
+		<checksum>http://iwillfolo.com/wordpress/wp-content/uploads/download_dir/addons.xml.md5</checksum>
+		<datadir zip="true">http://iwillfolo.com/wordpress/wp-content/uploads/download_dir/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install add-ons from iWillFolo repository</summary>
+		<summary lang="de">Installiere Add-ons von iWillFolo Repository</summary>
+		<description>download and install add-ons from iWillFolo repository.</description>
+		<description lang="de">Downloade und installiere Add-ons von iWillFolo Repository.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="plugin.video.canada.on.demand" name="Canada On Demand" version="0.8.6" provider-name="andre">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -668,10 +809,30 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.UFC"
+	name="UFC"
+	version="1.0.2"
+	provider-name="xbmchub.com">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">UFC</summary>
+    <description lang="en">Watch all Live Pay-Per-Views on YOUTUBE in Standard or High Definition.</description>
+    <platform>all</platform>
+    <forum>http://www.xbmchub.com/forums/official-xbmc-hub-repo/</forum>
+    <website>http://www.xbmchub.com/</website>
+  </extension>
+</addon>
+
 	<addon
         id="repository.imaxpo"
         name="iMaxpo's Repository"
-        version="1.3.6"
+        version="1.3.7"
         provider-name="iMaxpo">
 		<extension point="xbmc.addon.repository" name="iMaxpo's addon repository">
 			<info compressed="false">https://raw.github.com/luftreich/imaxpo.xbmc/master/addons.xml</info>
@@ -918,6 +1079,58 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.moviedb" version="3.0.5" name="Cliq!" provider-name="Blazetamer">
+<requires>
+<import addon="xbmc.python" version="2.1.0"/>
+<import addon="script.module.simplejson" version="3.3.0"/>
+<import addon="script.module.t0mm0.common" version="2.0.0"/>
+<import addon="script.module.urlresolver"  version="2.1.2"/>
+<import addon="script.module.metahandler" version="2.3.1" />
+<import addon="script.common.plugin.cache" version="2.5.2"/>
+<import addon="script.module.addon.common" version="2.0.0"/>
+<import addon="script.module.simple.downloader" version="1.9.4" />
+
+
+</requires>
+
+<extension point="xbmc.python.pluginsource" library="default.py">
+<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+<summary>Cliq! Live Streams Movies/TV</summary>
+<description> "Cliq" Includes iLive Streams, Movies, Tv Shows, Cartoons and Sports from several source websites. Content is updated daily. Download Movies and Shows to your library with a Queue!! Has add-on Wide Favorites! If you want it all Just Cliq!!!</description>
+<disclaimer>The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+
+<forum>http://www.xbmchub.com/forums/blazetamers-repository/17959-%5Brelease%5D-mdb-ultra-video-addon.html</forum>
+<website>http://www.cliqaddon.com/</website>
+
+<platform>all</platform>
+</extension>
+</addon>
+
+<addon id="plugin.video.sportsaholic"
+       name="Sports-A-Holic"
+       version="1.0.4"
+       provider-name="Mash2k3, Kuba">
+    <requires>
+        <import addon="xbmc.python" version="2.0"/>
+        <import addon="script.module.t0mm0.common" version="1.1.0"/>
+		<import addon="script.module.universal" version="0.0.1"/>
+		<import addon="script.module.playbackengine" version="1.0.0" />
+		<import addon="script.module.xbmc.ads" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+    <summary lang="en">Browse Sports Highlights from major sports broadcasters</summary>
+    <description lang="en">Browse and play a wide selection of shows/highlights from sources like TSN, ESPN and Sky Sports
+	[COLOR green]Sports-A-Holic is a part of the Developers Fund ad service for more info visit xbmctalk.com.[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.jagobd"
        name="JagoBD.com"
        version="1.0.7"
@@ -995,6 +1208,20 @@
     </extension>
 </addon>
 
+<addon id="repository.SportsDevil" name="SportsDevil repository" version="1.0.1" provider-name="Al101">
+	<extension point="xbmc.addon.repository" name="SportsDevil add-on repository">
+		<info compressed="false">http://raw.github.com/al101/repository.SportsDevil/master/addons.xml</info>
+		<checksum>http://raw.github.com/al101/repository.SportsDevil/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/al101/repository.SportsDevil/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Unofficial SportsDevil add-on</summary>
+		<description>SportsDevil created by MaxMustermann maintained by [COLOR blue]XBMCHUB.COM[/COLOR] community (enen92, jorges4lu2, alex35...)</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="plugin.video.filmarkivet"
        name="Filmarkivet"
        version="2.0.0"
@@ -1016,6 +1243,59 @@
     <summary lang="se">Se filmer från Svenska Filminstitutets Filmarkivet</summary>
     <description lang="en">Filmarkivet is an archive of historical Swedish films, provided by the Swedish Film Institute.</description>
     <description lang="se">Filmarkivet är ett arkiv med historiska svenska filmer, publicerade av Svenska Filminstitutet.</description>
+  </extension>
+</addon>
+
+<addon id="script.module.universal"
+       name="Universal - An Addons Toolkit"
+       version="1.0.2"
+       provider-name="the-one">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="0.0.1"/>
+  </requires>
+  <extension library="default.py" point="xbmc.service"  start="startup"/>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Universal - An Addons Toolkit</summary>
+    <description lang="en">Collection of common functionality for addons.</description>
+    <platform>all</platform>
+	<language></language>
+	<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+	<forum>http://www.xunitytalk.com/</forum>
+	<website>https://github.com/the-one-/script.module.universal/wiki</website>
+	<source>https://github.com/the-one-/script.module.universal</source>
+	<email>xs2the1[at]gmail[dot]com</email>
+  </extension>
+</addon>
+
+<addon id="script.navi-x"
+       name="Navi-X"
+       version="4.0"
+       provider-name="Team Navi-X and TVADDONS.ag">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.urlresolver"  />
+    <import addon="script.module.t0mm0.common"  />
+    <import addon="script.module.addon.common" optional="false" />
+    <import addon="repository.xbmchub" optional="true" />
+    <import addon="plugin.video.youtube" optional="false" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py" >
+    <provides>executable video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <minversion>28764</minversion>
+    <summary>Media Browser Addon for Kodi</summary>
+    <description>Navi-X is the oldest and most trusted add-on for Kodi, used by millions of people worldwide. You'll find everything from live television to your favourite movies and television shows, easily accessible.</description>
+    <disclaimer>http://www.navixtreme.com/terms/</disclaimer>
+    <forum>http://forums.tvaddons.ag/forums/38-NAVI-X-MEDIA-BROWSER-FOR-KODI</forum>
+    <website>http://www.navixtreme.com/</website>
+    <source></source>
+    <email></email>
   </extension>
 </addon>
 
@@ -1045,6 +1325,23 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.losmovies" version="1.19" name="Los Movies" provider-name="The_Silencer">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.urlresolver"  version="1.0.0"/>
+        <import addon="script.module.addon.common" version="2.0.0"/>
+	<import addon="script.module.metahandler"  version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Browse losmovies.com</summary>
+        <description>Play a wide selection of movies, tv-shows and HD content from www.losmovies.com</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.video.movie4k"
 	name="Movie4K.to"
 	version="1.0.2"
@@ -1059,6 +1356,24 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Movie4K.to</summary>
     <description lang="en">Movie4K/Movie2K is one of the best and easiest free movies websites to watch movies on the internet. Simply select the movie of your choice for free and without registration.</description>
+    <platform>all</platform>
+    <forum>http://www.xbmchub.com/forums/eleazars-xbmc-add-repository/</forum>
+    <website>http://www.xbmchub.com/</website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.filmontv" name="FilmOn" version="1.4" provider-name="FilmOn.TV Networks Inc">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.t0mm0.common" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">FilmOn</summary>
+    <language>en de fr es it ru</language>
+    <description lang="en">FilmOn.com is an internet based television provider owned by FilmOn.TV Networks Inc. FilmOn.TV Networks was founded by Alki David in 2006.FilmOn.com subscription packages include access to over 120 streaming TV channels (mostly in English language) in addition to premium FilmOn.com Movie channels and pay-per-view channels. Please visit www.xbmchub.com for assistance with this add-on.</description>
     <platform>all</platform>
     <forum>http://www.xbmchub.com/forums/eleazars-xbmc-add-repository/</forum>
     <website>http://www.xbmchub.com/</website>
