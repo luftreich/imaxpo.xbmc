@@ -67,6 +67,20 @@
   </extension>
 </addon>
 
+<addon id="repository.aj-addons" name="aj add-ons (new look)" version="1.0.1" provider-name="ajdeveloped">
+	<extension point="xbmc.addon.repository" name="AJ ADD-ONs (NEW LOOK)">
+		<info compressed="false">http://apple-tv2-xbmc.googlecode.com/svn/trunk/AddonsNewLookRepo/addons.xml</info>
+			<checksum>http://apple-tv2-xbmc.googlecode.com/svn/trunk/AddonsNewLookRepo/addons.xml.md5</checksum>
+			<datadir zip="true">http://apple-tv2-xbmc.googlecode.com/svn/trunk/AddonsNewLookRepo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install AJ ADD-ONs with new look and fastest of all.</summary>
+		<description>Enjoy access to Indian media sources like desirulez.net, sominaltvtheatre.com and more. All add-ons provide access to website like a normal browser.</description>
+		<disclaimer>The video add-ons hosted by my XBMC add-ons repository(aj add-ons) makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, video add-ons don't warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on the Internet web site where from data is retrieved or otherwise relating to such materials or on any sites linked to this addon. Videos are streamed directly from video-hosting websites that are having full rights to remove such access to video if required. These add-ons access website contents like a normal web browser and show content to users.</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="repository.xunitytalk" name=".[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk Repository" version="1.0.6" provider-name=".[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk">
 	<extension point="xbmc.addon.repository" name="Mikey1234 Addon Repository">
 		<info compressed="false">http://xty.me/xunitytalk/addons/addons.xml</info>
@@ -366,6 +380,20 @@ Turns your XBMC into an instant free on-demand media-center. Stream and download
         <description>Stream Live TV from FilmOn or watch FilmOn Demand. Login with your FilmOn user-name to access recording features.</description>
     </extension>
 
+</addon>
+
+<addon id="repository.dk-xbmc-repaddon" name="dk-xbmc-repaddon Add-on Repository" version="1.0.1" provider-name="dk-xbmc-repaddon">
+	<extension point="xbmc.addon.repository" name="dk-xbmc-repaddon Add-on Repository">
+		<info compressed="false">http://162.248.143.235/xbmc/addons.xml</info>
+		<checksum>http://162.248.143.235/xbmc/addons.xml.md5</checksum>
+		<datadir zip="false">http://162.248.143.235/xbmc/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Add-ons from dk Add-on Repository</summary>
+		<description>Video plug-ins for XBMC</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="plugin.video.viooz.co" name="Viooz" version="1.2.0" provider-name="lambda">
@@ -842,7 +870,7 @@ Turns your XBMC into an instant free on-demand media-center. Stream and download
 	<addon
         id="repository.imaxpo"
         name="iMaxpo's Repository"
-        version="1.3.8"
+        version="1.3.9"
         provider-name="iMaxpo">
 		<extension point="xbmc.addon.repository" name="iMaxpo's addon repository">
 			<info compressed="false">https://raw.github.com/luftreich/imaxpo.xbmc/master/addons.xml</info>
@@ -917,6 +945,20 @@ Turns your XBMC into an instant free on-demand media-center. Stream and download
 	<extension point="xbmc.addon.metadata">
 		<summary>Install My Addons</summary>
 		<description>Download and install addons from podgod!</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.gbzygil" name="gbzygil's XBMC Addons" version="1.0.0" provider-name="gbzygil">
+	<extension point="xbmc.addon.repository" name="gbzygil's XBMC Addon Repository">
+		<info compressed="false">https://github.com/gbzygil/gbzygil-xbmc-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/gbzygil/gbzygil-xbmc-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/gbzygil/gbzygil-xbmc-repo/raw/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>gbzygil's Addon Repository</summary>
+		<description>Download and install gbzygil's addon repository, home of the olangal.com and rajtamil.com addons!</description>
+		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
 </addon>
@@ -1368,6 +1410,19 @@ Turns your XBMC into an instant free on-demand media-center. Stream and download
         <description>Play a wide selection of movies, tv-shows and HD content from www.losmovies.com</description>
         <platform>all</platform>
     </extension>
+</addon>
+
+<addon id="repository.xbmc.chakra" name="Chakravyu's XBMC Addons" version="1.1.0" provider-name="Cherian Mathew (chakravyu)">
+  <extension point="xbmc.addon.repository" name="Chakravyu' XBMC Addon Repository">
+    <info compressed="false">https://github.com/chakravyu/repository.xbmc.chakra/raw/master/addons.xml</info>
+    <checksum>https://github.com/chakravyu/repository.xbmc.chakra/raw/master/addons.xml.md5</checksum>
+    <datadir zip="true">https://github.com/chakravyu/repository.xbmc.chakra/raw/master/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Install chakravyu's Addons</summary>
+    <description>Download and install addons by chakravyu</description>
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="plugin.video.movie4k"
