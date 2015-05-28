@@ -19,7 +19,7 @@
 <p><img src="https://raw.githubusercontent.com/luftreich/luftreich.github.io/master/image/ota/ota_udisk_format.png" alt="" /></p>
  * 结束 
  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * (~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CHN/ENG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~)
 
 ## [HowTo] MAXPO TV-BOX OTA SYSTEM UPGRADE (NETWORK & USB)
 ### STEP 1 
