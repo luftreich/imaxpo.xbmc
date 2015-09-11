@@ -43,3 +43,13 @@
  * （~~~~~~~~~~~~THE END:smile:~~~~~~~~~~~~）
 
 
+## TV-BOX 故障修复模式 RECOVERY MODE ##
+
+A. 如何进入, 以下方法二选一
+ * 按住遥控MENU键，  打开TV-BOX电源, 开机LOGO之后进入该模式
+ * 准备一TF卡， 其中新建lxl.ini文件, 插入TV-BOX,  打开电源
+
+B. 使用说明
+ 1. apply update from EXT -> Update from udisk/sdcard -> 选择OTA-ZIP升级包
+ 2. wipe data/factory reset
+
