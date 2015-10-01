@@ -65,6 +65,8 @@ read LUFT
 [ "$LUFT" = "Y" -o "$LUFT" = "y" ] && {
     python addons_xml_and_zipfile_generator.py 
     git status -u
+    scp addons.xml server:/work/www/
+    echo "http://192.168.1.20/addons.xml"
     echo -n 'Push to Github, any key continue ...'; read LUFT
     git add .
     git commit -a -m 'update'
