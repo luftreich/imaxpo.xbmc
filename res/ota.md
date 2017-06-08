@@ -24,6 +24,7 @@
 ## [HowTo] MAXPO TV-BOX OTA SYSTEM UPGRADE (NETWORK & USB)
 ### STEP 1 
 * OPEN : Settings -> Other -> System Update
+* OPEN : My Apps  -> UPDATE&BACKUP
 
 ### STEP 2
 * #### Via Network
